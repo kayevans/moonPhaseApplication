@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/noun_Waning Crescent Moon_1832265.png" type="image/x-icon">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova:400,600|Roboto:300,400&display=swap" rel="stylesheet"> 
+    <!-- my styles -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Moon Phase App | Phase Four</title>
+</head>
+<body> 
+
+    <!-- header begins -->
+    <header>
+        <!-- wrapper begins -->
+        <div class="wrapper">
+            <h1>the phase of the moon.</h1>
+            <!-- form section begin -->
+            <section class="input">
+                <div class="wrapper">
+                    <!-- choose whether want to manually input or choose selected place -->
+                    <form class="chooseMethod" action="">
+                        <div class="flexContainer">
+                            <!-- to write in  -->
+                            <input class="sr-only" type="radio" name="methodChoice" id="coordinate" value="coordinate">
+                            <label class="buttonStyles" for="coordinate">By Coordinates</label>
+    
+                            <!-- to choose selected places -->
+                            <input class="sr-only" type="radio" name="methodChoice" id="city" value="city">
+                            <label class="buttonStyles" for="city">By City</label>
+                        </div>
+                        <!-- submit button -->
+                        <input class="buttonStyles" type="submit" value="go.">
+                    </form> 
+                    <!-- form with the text inputs -->
+                    <form class="manualForm" action="">
+                        <div class="flexContainer">
+                            <!-- latitude -->
+                            <label class="sr-only" for="latitudeInput">Latitude</label>
+                            <input type="text" name="manualPlace" id="latitudeInput" placeholder="latitude">
+    
+                            <!-- longitude -->
+                            <label class="sr-only" for="longitudeInput">Longitude</label>
+                            <input type="text" name="manualPlace" id="longitudeInput" placeholder="longitude">
+                        </div>
+                        <!-- submit button -->
+                        <input class="buttonStyles" type="submit" value="check.">
+                    </form>
+                    <!-- form with the button selections -->
+                    <form action="" class="buttonForm">
+                        <div class="flexContainer">
+                            <!-- buttons with latitude and long in it -->
+                            <input class="sr-only" type="radio" name="place" id="toronto" value="43.651070,-79.347015">
+                            <label class="buttonStyles" for="toronto">Toronto</label>
+    
+                            <input class="sr-only" type="radio" name="place" id="london" value="51.509865,-0.118092">
+                            <label class="buttonStyles" for="london">London</label>
+    
+                            <input class="sr-only" type="radio" name="place" id="tokyo" value="35.652832,139.839478">
+                            <label class="buttonStyles" for="tokyo">Tokyo</label>
+                        </div>
+
+                        <!-- submit button -->
+                        <input class="buttonStyles" type="submit" value="check.">
+                    </form>
+                </div>
+            </section>
+            <!-- form section ends -->
+        </div>
+        <!-- wrapper ends -->
+    </header>
+    <!-- header ends -->
+
+    <!-- main section begins -->
+    <main>
+
+        <!-- results section begins -->
+        <section class="results">
+            <!-- wrapper begins -->
+            <div class="wrapper">
+                <!-- where current days will be placed -->
+                <div class="displayResult">
+
+                </div>
+                <h3>This week</h3>
+                <!-- where weekly will be placed -->
+                <ul class="weeklyResult">
+
+                </ul>
+
+                <p>Icons by Giacomo Drudi from the Noun Project</p>
+            </div>
+            <!-- wrapper ends -->
+        </section>
+        <!-- results section ends -->
+    </main>
+    <!-- main section ends -->
+
+    
+    <!-- jquery -->
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <!-- my JS -->
+    <script src="scripts.js"></script>
+</body>
+</html>

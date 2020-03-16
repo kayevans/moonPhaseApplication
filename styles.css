@@ -1,0 +1,391 @@
+/* setup begins */
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* set up ends */
+
+/*                          default styling                     */
+
+/* remove default spacing */
+*,
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+/* default image styles */
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* make it so we can use rem */
+html{
+    font-size: 62.5%;
+}
+
+/* wrapper styles */
+.wrapper{
+    max-width: 1200px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* basic styling */
+body,
+input[type="text"],
+input[type="text"]::placeholder,
+input[type="submit"]{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+}
+
+/* heading styles */
+h1,
+h2,
+h3,
+h4{
+    font-family: 'Ibarra Real Nova', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+/* remove the style of lists */
+li{
+    list-style-type: none;
+}
+
+/* default button styles */
+.buttonStyles{
+    margin: 0 auto;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 10px 0;
+    width: 30%;
+    text-transform: lowercase;
+    background: none;
+    color: rgb(236, 236, 236);
+    border: 1px solid rgb(236, 236, 236);
+    
+}
+
+
+/* default hover effect */
+.buttonStyles:hover,
+.buttonStyles:focus,
+form input[type="radio"]:checked + label.buttonStyles{
+    color: black;
+    border-color: black;
+    background-color: rgb(236, 236, 236);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+/*                      HEADER SECTION                   */
+
+/* header styles */
+header{
+    text-align: center;
+    height: 100vh;
+    background: 
+        linear-gradient(to bottom, rgba(0,0,0, 0.6),rgba(0,0,0, 0.6)), 
+        url(./assets/wallpaper-for-desktop-laptop-vj04-space-star-map-pattern-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/* h1 styles */
+h1{
+    color: rgb(236, 236, 236);
+    font-size: 4rem;
+    padding: 250px 0 80px;
+}
+
+/*                      form styles                 */
+
+/* flex the inputs */
+form div.flexContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* coordinate input styles */
+form input[type="text"]{
+    background: none;
+    border: none;
+    color: rgb(236, 236, 236);
+    font-size: 2rem;
+    padding: 10px 0 10px 0;
+    border-bottom: 1.5px solid rgb(236, 236, 236);
+    caret-color: rgb(236, 236, 236);
+}
+
+/* style the placeholder text */
+form input[type="text"]::placeholder{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+}
+
+/* hide the placeholder on focus */
+form input[type="text"]:focus::placeholder{
+    color: transparent;
+}
+
+/* submit button styles */
+form input[type="submit"].buttonStyles{
+    text-transform: uppercase;
+    /* put on another line */
+    display: block;
+    margin-top: 60px;
+    font-size: 1.4rem;
+    width: 20%;
+    background-color: rgb(236, 236, 236);
+    color: black;
+    border: 1px solid rgb(236, 236, 236);
+}
+
+/* submit button styles on hover and focus */
+form input[type="submit"].buttonStyles:hover,
+form input[type="submit"].buttonStyles:focus{
+    background-color: transparent;
+    color: rgb(236, 236, 236);
+    border: 1px solid rgb(236, 236, 236);
+}
+
+
+
+
+/*                      RESULTS SECTION                  */
+
+/* results section basic styles */
+section.results{
+    text-align: center;
+    display: none;
+}
+
+/* show when class is added */
+section.results.show{
+    display: block;
+}
+
+/* add padding above and below first section */
+section.results .displayResult{
+    padding: 50px 0 80px;
+}
+
+/* heading size */
+section.results .displayResult h2{
+    font-size: 3rem;
+}
+
+/* change size of images in main result section */
+section.results .displayResult .imageContainer{
+    width: 20%;
+    margin: 0 auto;
+    padding: 40px 0 30px;
+}
+
+/* flex the lis */
+section.results ul.weeklyResult{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+/* change the width of each li */
+section.results ul.weeklyResult li{
+    width: 22%;
+    padding-bottom: 50px;
+    font-size: 1.4rem;
+}
+
+/* change size of images in ul */
+section.results ul.weeklyResult .imageContainer{
+    width: 35%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+/* copyright */
+section.results p{
+    font-size: 1.2rem;
+    padding: 20px 0 30px;
+}
+
+
+/*              MEDIA QUERIES BEGIN              */
+
+@media (max-width: 1080px){
+
+    /*                                      BASIC STYLES                             */
+    /* change width of wrapper */
+    .wrapper{
+        width: 80%;
+    }
+
+    /*                                      HEADER STYLES                                    */
+
+    /* chnage the padding */
+    h1{
+        padding: 200px 0 80px;
+    }
+
+    /* FORM STYLES */
+
+    /* change direction of the manual inputs */
+    .manualForm .flexContainer{
+        flex-direction: column;
+        align-content: center;
+    }
+
+    /* coordinate input styles */
+    form input[type="text"]{
+        width: 60%;
+    }
+
+    /* add space below first input */
+    form input[type="text"]:first-of-type{
+        margin-bottom: 30px;
+    }
+
+    
+
+}
+
+@media (max-width: 800px){
+
+    /*                      header styles                   */
+    /* change spacing of h1 */
+    h1{
+        padding: 160px 0 60px;
+    }
+    /*  form styles  */
+
+    /* change size of the button in choose method form */
+    .chooseMethod label.buttonStyles{
+        width: 60%;
+    }
+
+    /* add spacing to the first one */
+    .chooseMethod .buttonStyles:first-of-type{
+        margin-bottom: 40px;
+    }
+
+    /* make into column */
+    .buttonForm .flexContainer,
+    .chooseMethod .flexContainer{
+        flex-direction: column;
+    }
+
+    /* add spacing to second one */
+    .buttonForm .buttonStyles:nth-of-type(2){
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    /* change width of buttons in button form */
+    .buttonForm label.buttonStyles{
+        width: 60%;
+    }
+
+    /* change width of the submit buttons */
+    form input[type="submit"].buttonStyles{
+        width: 25%;
+    }
+
+    /*                  results section styles                 */
+
+    /* change the width of each li */
+    section.results ul.weeklyResult li{
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 600px){
+    /*                          header styles                           */
+    /* change size of h1 */
+    h1{
+        font-size: 2.8rem;
+    }
+
+    /* form styles */
+    form input[type="text"]{
+        width: 100%;
+    }
+
+    /*                            results styles                      */
+
+    /* change width of the image container */
+    section.results .displayResult .imageContainer{
+        width: 40%;
+    }
+
+
+}
+
+@media (max-width: 450px){
+
+    /*                  header styles                    */
+    /* form styles */
+
+    /* change size of the buttons */
+    .chooseMethod label.buttonStyles,
+    .buttonForm label.buttonStyles{
+        width: 90%;
+    }
+
+    /* change width of the submit buttons */
+    form input[type="submit"].buttonStyles{
+        width: 40%;
+    }
+
+    /*              results styles                  */
+
+
+    /* make todays image bigger */
+    section.results .displayResult .imageContainer{
+        width: 60%;
+    }
+
+
+    /* change the width of each li */
+    section.results ul.weeklyResult li{
+        width: 100%;
+        padding-bottom: 60px;
+    }
+
+    /* make h4 bigger */
+    h4{
+        font-size: 1.6rem;
+    }
+
+    /* add more spacing between h4 and images */
+    section.results ul.weeklyResult .imageContainer{
+        padding-bottom: 20px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
