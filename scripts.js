@@ -155,7 +155,7 @@ moonPhaseApp.displayMoonPhase = function(array){
 moonPhaseApp.getMoonPhase = function(coordinate){
 
     $.ajax({
-        url: "http://proxy.hackeryou.com",
+        url: "https://proxy.hackeryou.com",
         method: "GET",
         dataType: "json",
         data: {
@@ -176,8 +176,6 @@ moonPhaseApp.getMoonPhase = function(coordinate){
         
         //display the information
         moonPhaseApp.displayMoonPhase(weeklyArray);
-
-        console.log(weeklyMoonPhase);
     });
 
 };
